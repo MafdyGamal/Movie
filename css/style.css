@@ -1,0 +1,68 @@
+body{
+    background-color: #0d0d0d;
+}
+.form-control{
+    background-color: transparent ;
+    border: transparent;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+}
+.movie{
+    position: relative;
+    overflow: hidden;
+}
+.desc{
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    /* bottom: -300px; */
+    right: 0;
+    left: 0;
+    background-color: rgba(220, 200, 220, 0.7);
+    transition: all 1s;
+}
+.movie:hover .desc {
+    top: 0;
+
+}
+nav{
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 9999;
+    left: -250px;
+    transition: left 1s;
+}
+.items{
+    width: 250px;
+}
+.icon{
+    background-color: #fff;
+    width: 50px;
+    height: 100%;
+}
+.items ul {
+    list-style: none;
+    /* position: relative;
+    top: 100%;*/
+    overflow: hidden;
+    height: 300px; 
+}
+.items ul li{
+    position: relative;
+    top: 300px;
+}
+.items ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 2.5rem;
+    padding-top: 25px;
+ 
+}
+.items ul li a:hover {
+    color: tomato;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #fff !important;
+}

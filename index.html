@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="d-flex">
+      <div class="items px-5 py-5 d-flex flex-column justify-content-between">
+        <ul>
+          <li class="item1"><a class="item-linke">Now playing</a></li>
+          <li class="item2"><a class="item-linke">Popular</a></li>
+          <li class="item3"><a class="item-linke">Top Rated</a></li>
+          <li class="item4"><a class="item-linke">Trending</a></li>
+          <li class="item5"><a class="item-linke">Upcoming</a></li>
+          <li class="item6">
+            <a class="item-contact" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="icon-social-media">
+          <i class="fa-brands fa-facebook-f fs-6 mx-2 text-white py-3"></i>
+          <i class="fa-brands fa-twitter fs-6 mx-2 text-white py-3"></i>
+          <i class="fa-solid fa-globe fs-6 mx-2 text-white py-3"></i>
+          <span>Copyright Â© 2019 All Rights Reserved.</span>
+        </div>
+      </div>
+      <div class="icon d-flex flex-column justify-content-between">
+        <div class="logo text-center py-4">
+          <img src="./images/logo.png" class="w-75" alt="" srcset="" />
+        </div>
+        <div class="icon-show py-5 text-center">
+          <i class="fa-solid fa-align-justify fs-3 open"></i>
+          <i class="fa-solid fa-xmark d-none fs-3 close"></i>
+        </div>
+        <div class="icon-social text-center py-3">
+          <i class="fa-solid fa-globe fs-3 py-3"></i>
+          <i class="fa-solid fa-share-nodes fs-3"></i>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="display-movie py-5 px-5">
+      <div class="container py-5">
+        <div class="input-group d-flex">
+          <input
+            type="text"
+            class="form-control mx-3 rounded-0 text-center"
+            id="searchWord"
+            placeholder="get movies by word ...."
+          />
+          <input
+            type="text"
+            class="form-control mx-3 rounded-0 text-center"
+            id="search"
+            placeholder="serch ...."
+          />
+        </div>
+        <div class="row py-5" id="row-movie"></div>
+      </div>
+    </section>
+
+    <footer class="pb-5" id="contact">
+      <div class="container">
+        <h3>ContacUs...</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="text"
+                id="name"
+                oninput=" validNameInp()"
+                class="form-control w-100 text-center mx-3 rounded-0"
+                placeholder="Enter Your Name"
+              />
+              <p id="invalidName" class="ps-4 pt-3 text-danger"></p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="text"
+                id="email"
+                class="w-100 form-control text-center mx-3 rounded-0"
+                oninput="validEmailInp()"
+                placeholder="Enter Email"
+              />
+              <p id="invalidEmail" class="ps-4 pt-3 text-danger"></p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="text"
+                id="phone"
+                oninput="validPhoneInp()"
+                class="w-100 form-control text-center mx-3 rounded-0"
+                placeholder="Enter phone"
+              />
+              <p id="invalidPhone" class="ps-4 pt-3 text-danger"></p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="text"
+                id="age"
+                oninput="validAgeInp()"
+                class="w-100 form-control text-center mx-3 rounded-0"
+                placeholder="Enter Age"
+              />
+              <p id="invalidAge" class="ps-4 pt-3 text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="password"
+                oninput="validPasswordInp()"
+                id="password"
+                class="w-100 form-control text-center mx-3 rounded-0"
+                placeholder="Enter Password"
+              />
+              <p id="invalidPassword" class="ps-4 pt-3 text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="password"
+                id="repassword"
+                oninput="validRepasswordInp()"
+                class="w-100 form-control text-center mx-3 rounded-0"
+                placeholder="Enter Password"
+              />
+              <p id="invalidRepassword" class="ps-4 pt-3 text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn btn-outline-danger text-danger disabled my-3 mx-3"
+          id="btn"
+        >
+          Submit
+        </button>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
